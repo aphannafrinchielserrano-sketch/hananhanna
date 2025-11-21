@@ -3,46 +3,421 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eau De Grandeur - Research</title>
-</head> <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eau De Grandeur - Research</title>
-    <link rel="stylesheet" href="style.css">  </head>
-<body> <link rel="stylesheet" href="style.css">
+    <title>Academic and Games: MLBB Research</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#introduction">Introduction</a>
-        <a href="#findings">Findings</a>
-        <a href="#conclusion">Conclusion</a>
-        <a href="#promotional-plan">Promotional Plan</a>
-    </nav>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+        }
 
-    <section id="home">
-        <h1>Eau De Grandeur</h1>
-        <p>Academic and Games: Understanding the Impact of Mobile Legends Bang Bang on the Academic Performance of Grade 10 Students (A.Y. 2025–2024)</p>
-        <a href="#introduction">VIEW RESEARCH OUTLINE</a>
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a0033 0%, #0a0a0a 50%, #2d0066 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(75, 0, 130, 0.15) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.5), 0 0 40px rgba(138, 43, 226, 0.3);
+            line-height: 1.2;
+        }
+
+        .title-effect {
+            background: linear-gradient(45deg, #8a2be2, #9370db, #ba55d3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #ba55d3;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: #ccc;
+            text-align: left;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .info-card h2 {
+            color: #ba55d3;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .game-focus {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(75, 0, 130, 0.2));
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 2px solid #8a2be2;
+            text-align: center;
+        }
+
+        .game-title {
+            font-size: 2.5rem;
+            color: #ba55d3;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .game-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: rgba(138, 43, 226, 0.1);
+            border: 2px solid rgba(138, 43, 226, 0.4);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            border-color: #8a2be2;
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+            background: rgba(138, 43, 226, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ba55d3;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .findings-section {
+            margin: 3rem 0;
+        }
+
+        .finding-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1.5rem;
+            border-left: 4px solid #8a2be2;
+            margin-bottom: 1.5rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .finding-item:hover {
+            background: rgba(138, 43, 226, 0.1);
+            transform: translateX(10px);
+        }
+
+        .finding-title {
+            color: #ba55d3;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .phase-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .phase-card {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(75, 0, 130, 0.15));
+            border: 2px solid rgba(138, 43, 226, 0.4);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .phase-card:hover {
+            border-color: #8a2be2;
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(138, 43, 226, 0.3);
+        }
+
+        .phase-number {
+            font-size: 3rem;
+            color: #8a2be2;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .phase-title {
+            font-size: 1.5rem;
+            color: #ba55d3;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .strategy-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .strategy-card:hover {
+            border-color: #8a2be2;
+            transform: translateY(-5px);
+            background: rgba(138, 43, 226, 0.1);
+        }
+
+        .strategy-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .strategy-title {
+            color: #ba55d3;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #8a2be2, #9370db);
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            border: 2px solid #8a2be2;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
+        }
+
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #8a2be2, transparent);
+            margin: 4rem 0;
+        }
+
+        .highlight {
+            color: #ba55d3;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .game-title {
+                font-size: 2rem;
+            }
+
+            .stats-grid, .phase-section, .strategies-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="content">
+            <h1 class="title-effect">ACADEMIC AND GAMES</h1>
+            <p class="subtitle">Understanding the Impact of Mobile Legends Bang Bang</p>
+            <p class="subtitle" style="font-size: 1rem; color: #888; margin-top: -1rem;">Grade 10 Students • A.Y. 2024–2025</p>
+            
+            <div class="game-focus">
+                <div class="game-icon">🎮</div>
+                <h2 class="game-title">Mobile Legends: Bang Bang</h2>
+                <p style="font-size: 1.1rem; color: #ccc;">The Focus of Our Research</p>
+            </div>
+
+            <div class="description">
+                <p>The proliferation of mobile games, specifically <span class="highlight">Mobile Legends: Bang Bang (MLBB)</span>, presents a significant challenge to the academic focus of Grade 10 students at APEC Schools C. Raymundo. This research addresses the observed decline in academic performance and the adoption of poor study habits, which are directly linked to gaming engagement. The project's goal is to investigate this relationship, quantify the local impact of MLBB on student life, and develop an actionable promotional plan to mitigate the negative effects.</p>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="info-card">
+                <h2>📊 Key Research Findings</h2>
+                <p style="margin-bottom: 1.5rem;">Our study, focusing on APEC Grade 10 students, revealed a direct correlation between prolonged MLBB playing time and decreased academic engagement.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">65%</div>
+                        <div class="stat-label">Students felt tired/unfocused after late-night gaming</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2.5hrs</div>
+                        <div class="stat-label">Average daily time spent on MLBB</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10-15%</div>
+                        <div class="stat-label">Drop in quarter grades among frequent players</div>
+                    </div>
+                </div>
+
+                <div class="findings-section">
+                    <div class="finding-item">
+                        <div class="finding-title">📉 Localized Data</div>
+                        <p>65% of surveyed students reported feeling "tired" or "unfocused" during morning classes following extended late-night gaming sessions (4+ hours).</p>
+                    </div>
+                    <div class="finding-item">
+                        <div class="finding-title">⏰ Time Displacement</div>
+                        <p>The average time spent daily on MLBB (2.5 hours) directly displaced time previously allocated to homework and review, leading to a 10-15% drop in quarter grades among the most frequent players.</p>
+                    </div>
+                    <div class="finding-item">
+                        <div class="finding-title">📚 Impact on Study Habits</div>
+                        <p>Frequent gamers exhibited a higher tendency to procrastinate, submit incomplete assignments, and show reduced participation in class discussions, indicating poor long-term study habits.</p>
+                    </div>
+                </div>
+
+                <p style="color: #ba55d3; font-weight: bold; margin-top: 1.5rem;">This data underscores the urgent need for intervention strategies focused on time management and responsible digital citizenship.</p>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="info-card">
+                <h2>💡 Recommendations & Strategies</h2>
+                <p style="margin-bottom: 1.5rem;">The data confirms a significant academic risk posed by excessive MLBB engagement among Grade 10 students. To combat this, the study recommends a multi-faceted approach focused on awareness and structured support.</p>
+
+                <div class="strategies-grid">
+                    <div class="strategy-card">
+                        <div class="strategy-icon">🎓</div>
+                        <div class="strategy-title">Prevention Strategies</div>
+                        <p>Integrate digital literacy modules into guidance classes to teach healthy gaming habits and promote alternative screen-free engagement activities.</p>
+                    </div>
+                    <div class="strategy-card">
+                        <div class="strategy-icon">🤝</div>
+                        <div class="strategy-title">Support Systems</div>
+                        <p>Direct affected students to school counselors for personalized time management plans and facilitate dialogue between parents and teachers.</p>
+                    </div>
+                    <div class="strategy-card">
+                        <div class="strategy-title">Balanced Approach</div>
+                        <p>The objective is not elimination but the establishment of balanced digital citizenship and responsible gaming habits.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="info-card">
+                <h2>🎯 Implementation Plan</h2>
+                <p style="margin-bottom: 2rem;">A three-phase approach to address the MLBB academic impact:</p>
+
+                <div class="phase-section">
+                    <div class="phase-card">
+                        <div class="phase-number">01</div>
+                        <div class="phase-title">Awareness Campaign</div>
+                        <p>Launch a targeted social media campaign (Facebook and Instagram) using striking purple-themed infographics and short video clips summarizing the key findings. This phase aims to grab the attention of both students and parents within the first two weeks.</p>
+                    </div>
+
+                    <div class="phase-card">
+                        <div class="phase-number">02</div>
+                        <div class="phase-title">Interactive Workshop</div>
+                        <p>A mandatory guidance counseling workshop will be scheduled for Grade 10 students. This workshop will use a gamified approach to teach effective time budgeting, self-regulation techniques, and provide personalized counseling for those identified as high-risk.</p>
+                    </div>
+
+                    <div class="phase-card">
+                        <div class="phase-number">03</div>
+                        <div class="phase-title">Resource Distribution</div>
+                        <p>A dedicated "Balanced Gaming Toolkit" will be distributed digitally to all APEC families. This toolkit will include a sample daily schedule, links to school support resources, and a printable contract between students and parents for setting healthy gaming limits.</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="cta-button">View Full Research Report</a>
+            
+            <p style="margin-top: 2rem; color: #888; font-size: 0.9rem;">
+                APEC Schools C. Raymundo • Grade 10 Research Project • Academic Year 2024-2025
+            </p>
+        </div>
     </section>
-
-    <section id="introduction">
-        <h2>1. Introduction & Research Outline</h2>
-        <p> The proliferation of mobile games, specifically Mobile Legends: Bang Bang (MLBB), presents a significant challenge to the academic focus of Grade 10 students at APEC Schools C. Raymundo. This research addresses the observed decline in academic performance and the adoption of poor study habits, which are directly linked to gaming engagement. The project's goal is to investigate this relationship, quantify the local impact of MLBB on student life, and develop an actionable promotional plan to mitigate the negative effects. This website serves as the final report, synthesizing data, drawing conclusions, and detailing a supportive plan to restore a healthy balance between academic commitment and leisure gaming. </p>
-    </section>
-
-    <section id="findings">
-        <h2>2. Key Findings & Data</h2>
-        <p> Our study, focusing on APEC Grade 10 students, revealed a direct correlation between prolonged MLBB playing time and decreased academic engagement. Key findings include: Localized Data: 65% of surveyed students reported feeling "tired" or "unfocused" during morning classes following extended late-night gaming sessions (4+ hours). Time Displacement: The average time spent daily on MLBB (2.5 hours) directly displaced time previously allocated to homework and review, leading to a 10-15% drop in quarter grades among the most frequent players. Impact on Study Habits: Frequent gamers exhibited a higher tendency to procrastinate, submit incomplete assignments, and show reduced participation in class discussions, indicating poor long-term study habits. This data underscores the urgent need for intervention strategies focused on time management and responsible digital citizenship. </p>
-    </section>
-
-    <section id="conclusion">
-        <h2>3. Conclusion & Recommendations</h2>
-        <p> The data confirms a significant academic risk posed by excessive MLBB engagement among Grade 10 students. To combat this, the study recommends a multi-faceted approach focused on awareness and structured support. Strategies for prevention include integrating digital literacy modules into guidance classes to teach healthy gaming habits and promoting school-based activities that offer alternative, screen-free engagement. Seeking support is essential, which involves directing affected students to school counselors for personalized time management plans and opening dialogue between parents and teachers to monitor gaming time proactively. The objective is not elimination but the establishment of balanced digital citizenship. </p>
-    </section>
-
-    <section id="promotional-plan">
-        <h2>4. Promotional Plan</h2>
-        <p> PHASE 1 (Awareness Campaign): We will launch a targeted social media campaign (Facebook and Instagram) using striking purple-themed infographics and short video clips summarizing the key findings. This phase aims to grab the attention of both students and parents within the first two weeks. PHASE 2 (Interactive Workshop): A mandatory guidance counseling workshop will be scheduled for Grade 10 students. This workshop will use a gamified approach to teach effective time budgeting, self-regulation techniques, and provide personalized counseling for those identified as high-risk. PHASE 3 (Resource Distribution): A dedicated "Balanced Gaming Toolkit" will be distributed digitally to all APEC families. This toolkit will include a sample daily schedule, links to school support resources, and a printable contract between students and parents for setting healthy gaming limits. </p>
-    </section>
-
 </body>
 </html>
