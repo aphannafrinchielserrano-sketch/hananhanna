@@ -18,36 +18,6 @@
             overflow-x: hidden;
         }
 
-        /* ====================== NAVIGATION BAR ====================== */
-
-        nav {
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            background: rgba(20, 0, 40, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav a {
-            color: #ba55d3;
-            text-decoration: none;
-            margin: 0 1.5rem;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #fff;
-        }
-
-        /* =========================================================== */
-
         .hero {
             min-height: 100vh;
             background: linear-gradient(135deg, #1a0033 0%, #0a0a0a 50%, #2d0066 100%);
@@ -133,6 +103,178 @@
             text-transform: uppercase;
         }
 
+        .game-focus {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(75, 0, 130, 0.2));
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 2px solid #8a2be2;
+            text-align: center;
+        }
+
+        .game-title {
+            font-size: 2.5rem;
+            color: #ba55d3;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .game-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: rgba(138, 43, 226, 0.1);
+            border: 2px solid rgba(138, 43, 226, 0.4);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            border-color: #8a2be2;
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+            background: rgba(138, 43, 226, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ba55d3;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .findings-section {
+            margin: 3rem 0;
+        }
+
+        .finding-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1.5rem;
+            border-left: 4px solid #8a2be2;
+            margin-bottom: 1.5rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .finding-item:hover {
+            background: rgba(138, 43, 226, 0.1);
+            transform: translateX(10px);
+        }
+
+        .finding-title {
+            color: #ba55d3;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .phase-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .phase-card {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(75, 0, 130, 0.15));
+            border: 2px solid rgba(138, 43, 226, 0.4);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .phase-card:hover {
+            border-color: #8a2be2;
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(138, 43, 226, 0.3);
+        }
+
+        .phase-number {
+            font-size: 3rem;
+            color: #8a2be2;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .phase-title {
+            font-size: 1.5rem;
+            color: #ba55d3;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .strategy-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .strategy-card:hover {
+            border-color: #8a2be2;
+            transform: translateY(-5px);
+            background: rgba(138, 43, 226, 0.1);
+        }
+
+        .strategy-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .strategy-title {
+            color: #ba55d3;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #8a2be2, #9370db);
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            border: 2px solid #8a2be2;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
+        }
+
         .section-divider {
             height: 2px;
             background: linear-gradient(90deg, transparent, #8a2be2, transparent);
@@ -144,89 +286,27 @@
             font-weight: bold;
         }
 
-        /* ===== New image sections ===== */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
 
-        .image-section {
-            padding: 4rem 2rem;
-            max-width: 1100px;
-            margin: auto;
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .game-title {
+                font-size: 2rem;
+            }
+
+            .stats-grid, .phase-section, .strategies-grid {
+                grid-template-columns: 1fr;
+            }
         }
-
-        .image-section img {
-            width: 100%;
-            border-radius: 15px;
-            border: 2px solid #8a2be2;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 0 25px rgba(138, 43, 226, 0.4);
-        }
-
-        .image-section h2 {
-            color: #ba55d3;
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-        }
-
     </style>
 </head>
-
 <body>
-
-    <!-- ====================== NAVIGATION BAR ====================== -->
-
-    <nav>
-        <a href="#layout-section">Stream Layout</a>
-        <a href="#platform-section">Platforms</a>
-        <a href="#research-section">Research</a>
-    </nav>
-
-    <!-- ====================== END NAVBAR ========================== -->
-
-
-    <!-- SPACING because navbar is fixed -->
-    <div style="height: 80px;"></div>
-
-
-    <!-- ====================== FIRST IMAGE SECTION ====================== -->
-
-    <section id="layout-section" class="image-section">
-        <h2>📺 Stream Layout Design</h2>
-
-        <img src="/mnt/data/fc57b538-b43e-4535-8016-a95045636948.png">
-
-        <p class="description">
-            Our stream layout is designed to maximize brand identity and functional content delivery for the Awareness Campaign. 
-            The design utilizes a futuristic purple aesthetic and features intricate geometric network graphics to establish a professional, 
-            “vibe-coded” brand identity. Functionally, the layout cleanly separates the Main Video feed from the LIVE CHAT panel. 
-            This optimization ensures maximum content visibility and facilitates seamless audience interaction, which is critical for an engaging 
-            presentation of the project's academic findings.
-        </p>
-    </section>
-
-    <div class="section-divider"></div>
-
-
-    <!-- ====================== SECOND IMAGE SECTION ====================== -->
-
-    <section id="platform-section" class="image-section">
-        <h2>🌐 Campaign Platforms</h2>
-
-        <img src="/mnt/data/e63bc134-65ed-40b7-a757-3db44524e8d2.png">
-
-        <p class="description">
-            The strategic platforms for the Awareness Campaign are Facebook and Instagram. We will utilize Facebook because it allows us 
-            to reach viewers in real time, facilitating immediate interaction through comments and reactions. Instagram will be used to launch 
-            a targeted social media campaign, using visually striking content and short video clips to summarize the key findings. 
-            The selection of these platforms is a strategic decision to ensure the research findings and recommendations are disseminated 
-            to the largest and most accessible audience possible.
-        </p>
-    </section>
-
-    <div class="section-divider"></div>
-
-
-    <!-- ====================== ORIGINAL CODE STARTS HERE ====================== -->
-
-    <section class="hero" id="research-section">
+    <section class="hero">
         <div class="content">
             <h1 class="title-effect">ACADEMIC AND GAMES</h1>
             <p class="subtitle">Understanding the Impact of Mobile Legends Bang Bang</p>
@@ -244,12 +324,10 @@
 
             <div class="section-divider"></div>
 
-            <!-- EVERYTHING BELOW remains your original content unchanged -->
-
             <div class="info-card">
                 <h2>📊 Key Research Findings</h2>
                 <p style="margin-bottom: 1.5rem;">Our study, focusing on APEC Grade 10 students, revealed a direct correlation between prolonged MLBB playing time and decreased academic engagement.</p>
-
+                
                 <div class="stats-grid">
                     <div class="stat-card">
                         <div class="stat-number">65%</div>
@@ -321,7 +399,7 @@
                     </div>
 
                     <div class="phase-card">
-                        <div the="phase-number">02</div>
+                        <div class="phase-number">02</div>
                         <div class="phase-title">Interactive Workshop</div>
                         <p>A mandatory guidance counseling workshop will be scheduled for Grade 10 students. This workshop will use a gamified approach to teach effective time budgeting, self-regulation techniques, and provide personalized counseling for those identified as high-risk.</p>
                     </div>
@@ -341,6 +419,5 @@
             </p>
         </div>
     </section>
-
 </body>
 </html>
