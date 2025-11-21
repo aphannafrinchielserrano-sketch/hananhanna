@@ -1,0 +1,29 @@
+body {
+    background-color: #1e003a; /* Dark Purple Background */
+    color: #ffffff; /* White Text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 60px;
+}
+nav {
+    background-color: #4a148c; /* Lighter Purple Nav Bar */
+    position: fixed; /* Keeps the nav bar at the top */
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+h1, h2 {
+    color: #ffcc00; /* Yellow accents for titles */
+}
+section {
+    padding: 50px 20px;
+    min-height: 80vh;
+}
