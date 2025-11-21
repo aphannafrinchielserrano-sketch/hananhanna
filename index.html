@@ -280,6 +280,14 @@
             margin-bottom: 1rem;
         }
 
+        /* NEW STYLE FOR BALANCED APPROACH ICON */
+        .balanced-approach-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #9370db; /* Medium Purple */
+        }
+        /* END NEW STYLE */
+
         .strategy-title {
             color: #ba55d3;
             font-weight: bold;
@@ -319,7 +327,7 @@
             font-weight: bold;
         }
 
-        /* Image with Description Styles */
+        /* Image with Description Styles - Original style maintained for Stream/Platform */
         .image-container {
             margin: 4rem 0;
             background: rgba(255, 255, 255, 0.05);
@@ -333,6 +341,12 @@
             align-items: center;
         }
 
+        .image-container h2 {
+            color: #ba55d3; /* Apply title color */
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
         .image-display {
             width: 100%;
             max-width: 800px; /* Adjust as needed */
@@ -342,6 +356,7 @@
             background-position: center;
             border-radius: 10px;
             border: 1px solid rgba(138, 43, 226, 0.5);
+            background-color: #000; /* Ensure background if image is transparent or small */
         }
 
         .image-description {
@@ -494,23 +509,22 @@
             </div>
 
             <div class="section-divider"></div>
+            
+            <div class="image-container" id="stream-layout">
+                <h2>📺 Stream Layout</h2>
+                <div class="image-display" style="background-image: url('pic.jpg');"></div>
+                <div class="image-description">
+                    <p>Our stream layout is designed to maximize brand identity and functional content delivery for the Awareness Campaign. The design utilizes a futuristic purple aesthetic and features intricate geometric network graphics to establish a professional, <span class="highlight">"vibe-coded" brand identity</span>. Functionally, the layout cleanly separates the Main Video feed from the LIVE CHAT panel. This optimization ensures maximum content visibility and facilitates seamless audience interaction, which is critical for an engaging presentation of the project's academic findings.</p>
+                </div>
+            </div>
 
-            <div class="info-card" id="promotional-visuals">
-                <h2>🖼️ Promotional Visuals</h2>
-                <p style="margin-bottom: 2rem;">Key visual elements and platforms for our awareness campaign.</p>
+            <div class="section-divider"></div>
 
-                <div class="image-card-section">
-                    <div class="image-phase-card">
-                        <div class="card-icon-number">✨</div> <div class="card-title">Stream Layout</div>
-                        <div class="card-image" style="background-image: url('images/image_0b3cca.jpg');"></div>
-                        <p>Our stream layout is designed to maximize brand identity and functional content delivery for the Awareness Campaign. The design utilizes a futuristic purple aesthetic and features intricate geometric network graphics to establish a professional, "vibe-coded" brand identity. Functionally, the layout cleanly separates the Main Video feed from the LIVE CHAT panel. This optimization ensures maximum content visibility and facilitates seamless audience interaction, which is critical for an engaging presentation of the project's academic findings.</p>
-                    </div>
-
-                    <div class="image-phase-card">
-                        <div class="card-icon-number">🌐</div> <div class="card-title">Our Platform</div>
-                        <div class="card-image" style="background-image: url('images/image_0b3ce4.jpg');"></div>
-                        <p>The strategic platforms for the Awareness Campaign are Facebook and Instagram. We will utilize Facebook because it allows us to reach viewers in real time, facilitating immediate interaction through comments and reactions. Instagram will be used to launch a targeted social media campaign, using visually striking content and short video clips to summarize the key findings. The selection of these platforms is a strategic decision to ensure the research findings and recommendations are disseminated to the largest and most accessible audience possible.</p>
-                    </div>
+            <div class="image-container" id="our-platform">
+                <h2>📱 Our Platform</h2>
+                <div class="image-display" style="background-image: url('fbnig.jpeg');"></div>
+                <div class="image-description">
+                    <p>The strategic platforms for the Awareness Campaign are <span class="highlight">Facebook and Instagram</span>. We will utilize Facebook because it allows us to reach viewers in real time, facilitating immediate interaction through comments and reactions. Instagram will be used to launch a targeted social media campaign, using visually striking content and short video clips to summarize the key findings. The selection of these platforms is a strategic decision to ensure the research findings and recommendations are disseminated to the largest and most accessible audience possible.</p>
                 </div>
             </div>
             
